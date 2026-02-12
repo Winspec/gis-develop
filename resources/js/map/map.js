@@ -32,11 +32,11 @@ const basemaps = {
         maxZoom: 19,
         attribution: "OpenStreetMap",
     }),
-    terrain: L.tileLayer(
-        "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.png",
+    google: L.tileLayer(
+        "https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}",
         {
-            maxZoom: 18,
-            attribution: "Stamen",
+            maxZoom: 19,
+            attribution: "Google Satellite",
         },
     ),
 };
@@ -45,9 +45,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     map = initMap();
     if (!map) return;
 
-    basemaps.osm.addTo(map);
+    basemaps.google.addTo(map);
 
-    L.control.layers(basemaps, null, { position: "topright" }).addTo(map);
+    L.control.layers(basemaps, null, { 
+        position: "topright",
+        collapsed: true 
+    }).addTo(map);
 
     await loadFacilities();
 });

@@ -19,7 +19,7 @@
                 <!-- Options will be populated by JavaScript -->
             </datalist>
 
-            <div class="h-6 w-px bg-slate-600/30 mx-1"></div>
+            <div class="h-6 w-px bg-slate-200/30 mx-1"></div>
 
             <a href="#" class="font-medium text-slate-200">Peta</a>
             <a href="#" class="font-medium text-slate-200">Informasi</a>
